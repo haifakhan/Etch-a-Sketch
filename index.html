@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etch A Sketch</title>
+</head>
+<body>
+    <h1>Etch A Sketch</h1>
+    <div class = "controls">
+        <button id="rainbowButton">Rainbow Mode</button>
+        <button id="clearButton">Clear</button> 
+        <label for="colorPicker" style="display: flex; align-items: center; gap: 10px; font-family: Arial, sans-serif; font-size: 14px;">
+            <span>Pick a Color:</span>
+            <input type="color" id="colorPicker" value="#000000" style="border-radius: 8px; width: 40px; height: 40px; padding: 0; border: 1px solid #ccc; cursor: pointer; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);">
+        </label>
+    </div>
+    <div id="container"></div>
+    <script src="script.js"></script>
+</body>
+</html> 
