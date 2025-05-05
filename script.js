@@ -1,14 +1,18 @@
 const defaultSize = 16
 let rainbowMode = false
 let currentColour = "black"
-
+let colour = "black"
 //event listeners 
 
 const grid = document.getElementById("container")
 
 document.getElementById("colorPicker").addEventListener("input", (e) => {
     currentColour = e.target.value; 
+    colour = currentColour;
     rainbowMode = false; 
+});
+document.getElementById("colorPicker").addEventListener("click", () => {
+    currentColour = colour;
 });
 document.getElementById("rainbowButton").addEventListener("click", () => {
     rainbowMode = true;
@@ -27,8 +31,8 @@ document.getElementById("clearButton").addEventListener("click", (e) => {
 function createGrid(size) {
     grid.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
     grid.style.gridTemplateRows = `repeat(${size}, 1fr)`; 
-    grid.style.width = `${size * 50}px`;
-    grid.style.height = `${size * 50}px`; 
+    grid.style.width = `${size * 40}px`;
+    grid.style.height = `${size * 40}px`; 
     grid.style.margin = "20px auto";
     grid.style.border = "2px solid darkred"; 
     grid.style.display = "grid"; 

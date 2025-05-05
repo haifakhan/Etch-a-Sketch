@@ -1,0 +1,188 @@
+#container {
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+}
+
+
+#container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.15) 0px,
+        rgba(0, 0, 0, 0.15) 2px,
+        transparent 2px,
+        transparent 4px
+    );
+    z-index: 0; 
+    pointer-events: none; 
+}
+
+body {
+    background: linear-gradient(45deg, #2a2a2a, #1a1a1a);
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'VT323', monospace;
+    position: relative;
+}
+
+.tv-frame {
+    background: #3a3a3a;
+    padding: 2rem;
+    border-radius: 20px;
+    position: relative;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    border: 5px solid #4a4a4a;
+}
+
+.tv-frame::before {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    border-radius: 30px;
+    background: linear-gradient(45deg, #555, #333);
+    z-index: -1;
+}
+
+.tv-frame::after {
+    content: '';
+    position: absolute;
+    top: -15px;
+    left: -15px;
+    right: -15px;
+    bottom: -15px;
+    border: 8px solid #3a3a3a;
+    border-radius: 25px;
+    box-shadow: inset 0 0 20px rgba(0,0,0,0.5),
+                0 0 30px rgba(0,0,0,0.3);
+}
+
+h1 {
+    color: #ff4444;
+    text-align: center;
+    font-family: 'Press Start 2P', cursive;
+    text-shadow: 5px 2px 0 #000;
+    letter-spacing: 4px;
+    margin: 0 0 2rem 0;
+    position: relative;
+    animation: flicker 0.1s infinite alternate;
+}
+
+@keyframes flicker {
+    0% { opacity: 0.9; }
+    100% { opacity: 1; }
+}
+
+
+.controls {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
+}
+
+.retro-btn {
+    background: #4a4a4a;
+    border: 3px solid #2a2a2a;
+    color: #ffd700;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.3),
+                inset -2px -2px 5px rgba(0,0,0,0.2);
+    width: 100;
+    position: relative;
+    padding: 10px 20px;
+    font-family: 'VT323', monospace;
+    font-size: 1.5rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-radius: 8px;
+}
+
+
+.retro-btn:hover {
+    background: #ffdf4d;
+    box-shadow: 0 0 15px #ffd700;
+}
+
+.color-picker-label {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #ffd700;
+    font-size: 1.5rem;
+}
+
+#colorPicker {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 50px;
+    height: 50px;
+    border: 3px solid #8b8000;
+    border-radius: 8px;
+    background: #222;
+    cursor: pointer;
+}
+
+#colorPicker::-webkit-color-swatch {
+    border: none;
+    border-radius: 4px;
+}
+
+.tv-antenna {
+    position: absolute;
+    top: -80px;
+    width: 4px;
+    height: 60px;
+    background: #666;
+}
+
+.tv-antenna.left {
+    left: 20%;
+    transform: rotate(-30deg);
+}
+
+.tv-antenna.right {
+    right: 20%;
+    transform: rotate(30deg);
+}
+
+.tv-stand {
+    position: absolute;
+    bottom: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 20px;
+    background: #4a4a4a;
+    border-radius: 0 0 10px 10px;
+}
+
+
+
+.tv-screw {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background: #666;
+    border-radius: 50%;
+    box-shadow: inset 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.tv-screw.tl { top: 10px; left: 10px; }
+.tv-screw.tr { top: 10px; right: 10px; }
+.tv-screw.bl { bottom: 10px; left: 10px; }
+.tv-screw.br { bottom: 10px; right: 10px; }
