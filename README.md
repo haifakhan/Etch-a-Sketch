@@ -1,8 +1,8 @@
 # Etch-a-Sketch
 
-![Etch a Sketch](etchasketch2.png)
+<img src="etchasketch2.png" alt="Etch A Sketch Screenshot" width="600" />
 
-A simple browser-based drawing grid inspired by the classic Etch-A-Sketch.
+A simple browser-based drawing grid inspired by the classic Etch-A-Sketch. ✏️
 
 ## Features
 
@@ -15,4 +15,4 @@ A simple browser-based drawing grid inspired by the classic Etch-A-Sketch.
 1. Open `index.html` in your browser.
 2. Use the color picker, buttons, and hover over the grid to draw.
 
-Enjoy drawing!
+Enjoy drawing! 📺
