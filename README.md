@@ -1,6 +1,6 @@
 # Etch-a-Sketch
 
-![Etch a Sketch](etchasketch.png)
+![Etch a Sketch](etchasketch2.png)
 
 A simple browser-based drawing grid inspired by the classic Etch-A-Sketch.
 
